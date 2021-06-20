@@ -9,17 +9,17 @@ import { User } from './user.entity';
  */
 @Entity('book')
 export class Book extends BaseEntity {
-  @Column({ name: 'title', length: 150 })
-  title: string;
+    @Column({ name: 'title', length: 150 })
+    title: string;
 
-  @Column({ name: 'author', nullable: true })
-  author: string;
+    @Column({ name: 'author', nullable: true })
+    author: string;
 
-  @Column({ name: 'year', nullable: true })
-  year: string;
+    @Column({ name: 'year', nullable: true })
+    year: string;
 
-  @ManyToOne(type => User)
-  manyUserToOneBook: User;
+    @ManyToOne(type => User)
+    manyUserToOneBook: User;
 
-  // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
 }

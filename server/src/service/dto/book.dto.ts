@@ -9,19 +9,19 @@ import { UserDTO } from './user.dto';
  * A Book DTO object.
  */
 export class BookDTO extends BaseDTO {
-  @IsNotEmpty()
-  @MaxLength(150)
-  @ApiModelProperty({ description: 'title field' })
-  title: string;
+    @IsNotEmpty()
+    @MaxLength(150)
+    @ApiModelProperty({ description: 'title field' })
+    title: string;
 
-  @ApiModelProperty({ description: 'author field', required: false })
-  author: string;
+    @ApiModelProperty({ description: 'author field', required: false })
+    author: string;
 
-  @ApiModelProperty({ description: 'year field', required: false })
-  year: string;
+    @ApiModelProperty({ description: 'year field', required: false })
+    year: string;
 
-  @ApiModelProperty({ type: UserDTO, description: 'manyUserToOneBook relationship' })
-  manyUserToOneBook: UserDTO;
+    @ApiModelProperty({ type: UserDTO, description: 'manyUserToOneBook relationship' })
+    manyUserToOneBook: UserDTO;
 
-  // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
 }
